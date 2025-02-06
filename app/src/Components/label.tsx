@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, TextStyle } from 'react-native';
 
 interface LabelProps {
-  text?: string;
+  text: string;
   fontSize?: number; 
   fontWeight?: 'normal' | 'bold' | '100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900';  
   color?: string; 
