@@ -1,12 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextStyle } from 'react-native';
+import { StyleSheet, Text, View, TextStyle, StyleProp, ColorValue } from 'react-native';
 
 interface LabelProps {
   text: string;
   fontSize?: number; 
   fontWeight?: 'normal' | 'bold' | '100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900';  
-  color?: string; 
-  style?: TextStyle;  
+  color?: ColorValue; 
+  style?: StyleProp<TextStyle>;  
 }
 
 const Label: React.FC<LabelProps> = ({ text, fontSize, fontWeight, color, style }) => (
