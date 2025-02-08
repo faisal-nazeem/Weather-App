@@ -40,6 +40,7 @@ const TemperatureScreen = () => {
         });
 
       } catch (error) {
+
         console.error('Error fetching weather data:', error);
       }
     };
@@ -73,18 +74,14 @@ const TemperatureScreen = () => {
           <View style={styles.card}>
             {Array.from({ length: 4 }).map((_, index) => (
               <View key={index} style={{ alignItems: 'center', justifyContent: 'center', marginHorizontal: 5 }}>
-                <Text style={{color  : color.white}}>{weatherData.temperature}°C</Text>
+                <Text style={{ color: color.white }}>{weatherData.temperature}°C</Text>
                 <WeatherIcon description={weatherData.description} />
-                <Text style={{color  : color.white}}>{weatherData.temperature}</Text>
+                <Text style={{ color: color.white }}>{weatherData.temperature}</Text>
               </View>
-            ))}
+            ))} 
           </View>
-
-
-
         </View>
       </View>
-
     </View>
   );
 };

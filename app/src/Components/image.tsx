@@ -1,13 +1,13 @@
 import React from 'react';
-import { Image, ImageSourcePropType, StyleSheet, ImageStyle } from 'react-native';
+import { Image, ImageSourcePropType, StyleSheet, ImageStyle, StyleProp } from 'react-native';
 
 interface CustomImageProps {
   source: ImageSourcePropType;
-  style?: ImageStyle;
+  style?: StyleProp<ImageStyle>;
 }
 
 const CustomImage: React.FC<CustomImageProps> = ({ source, style }) => {
-  return <Image source={source} style={[styles.image, style]} />;
+  return <Image source={source} resizeMode='contain' style={[styles.image, style]} />;
 };
 
 const styles = StyleSheet.create({
